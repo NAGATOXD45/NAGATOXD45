@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Mostrar archivo CSV en HTML</title>
+    <meta charset="UTF-8">
+    <meta name=\"viewport" content="width=device-width, initial-scale=1">
+</head>\n<body>
+
+\t<h1>Mostrar archivo CSV en HTML</h1>
+
+    <table id="tablaCSV" border="1">
+        
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // URL del archivo CSV
+        var url = 'ejemplo.csv';
+
+        // Cargar archivo CSV usando jQuery
+        $.get(url, function(data) {
+            var filas = data.split('\n');
+            for(var i = 0; i < filas.length; i++) {
+                var celdas = filas[i].split(',');\n\t\t\t	var filaHTML = '<tr>';
+                for(var j = 0; j < celdas.length; j++) {
+                    filaHTML += '<td>' + celdas[j] + '</td>';
+                }
+                filaHTML += '</tr>';
+                $('#tablaCSV').append(filaHTML);
+\t\t\t}\n\t	});
+\t</script>
+
+</body>
+</html>
