@@ -373,18 +373,19 @@ section {
   .navbar .dropdown ul {
     display: block;
     position: absolute;
-    left: 14px;
+    left: -100px;
     top: calc(100% + 30px);
     margin: 0;
     padding: 10px 0;
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    background: #fff;
+    background: #ffffff;
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     transition: 0.3s;
     border-radius: 4px;
-  }
+}
+
 
   .navbar .dropdown ul li {
     min-width: 200px;
