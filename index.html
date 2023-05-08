@@ -153,87 +153,89 @@
             </div><!-- End Stats Item -->
 
           </div>
+          
         </div>
 
         <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
           <img src="assets/img/hero-img.png" class="img-fluid mb-3 mb-lg-0" alt="">
         </div>
-
+       
       </div>
+      <div class="dropdown" style="float: left;">
+        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Mostrar
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#" id="show50">50 registros</a>
+          <a class="dropdown-item" href="#" id="show100">100 registros</a>
+          <a class="dropdown-item" href="#" id="show200">200 registros</a>
+          <a class="dropdown-item" href="#" id="show500">500 registros</a>
+          <a class="dropdown-item" href="#" id="showAll">Todos los registros</a>
+         </div>
+        
+      </div>
+  <div class="container">
+    <h1 align="center">DATOS-CSMC-VIRGEN-ASUNTA</h1>
+    <br />
+    <div class="row">
+      <div class="col-md-2">
+        <div class="form-group">
+          <label for="search1">AÑO:</label>
+          <input type="text" name="search1" id="search1" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <label for="search2">MES:</label>
+          <input type="text" name="search2" id="search2" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <label for="search3">DIA:</label>
+          <input type="text" name="search3" id="search3" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <label for="search4">DNI:</label>
+          <input type="text" name="search4" id="search4" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <label for="search5">PERSONAL:</label>
+          <input type="text" name="search5" id="search5" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <label for="search6">CODIGO:</label>
+          <input type="text" name="search6" id="search6" class="form-control">
+        </div>
+      </div>
+    </div>
+    <br />
+    <div align="center">
+      
+      <button type="button" name="load_data" id="load_data" class="btn btn-outline-info btn-lg">CARGAR DATA</button>
+      <button id="export-btn" class="btn btn-outline-success     btn-lg">Exportar a Excel</button>
+      <button id="record_count_label" type="button" class="btn btn-success btn-lg" style="float: right;"></button>
+    </div>
+  </div>
+  
+  <br />
+  <div class="table-responsive">
+    <div class="container-fluid" id="employee_table">
+    </div>
+  </div>
+  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
     </div>
   </section><!-- End Hero Section -->
 
   <main id="main">
-    <div class="dropdown" style="float: left;">
-      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Mostrar
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#" id="show50">50 registros</a>
-        <a class="dropdown-item" href="#" id="show100">100 registros</a>
-        <a class="dropdown-item" href="#" id="show200">200 registros</a>
-        <a class="dropdown-item" href="#" id="show500">500 registros</a>
-        <a class="dropdown-item" href="#" id="showAll">Todos los registros</a>
-       </div>
-      
-    </div>
-<div class="container">
-  <h1 align="center">DATOS-CSMC-VIRGEN-ASUNTA</h1>
-  <br />
-  <div class="row">
-    <div class="col-md-2">
-      <div class="form-group">
-        <label for="search1">AÑO:</label>
-        <input type="text" name="search1" id="search1" class="form-control">
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="form-group">
-        <label for="search2">MES:</label>
-        <input type="text" name="search2" id="search2" class="form-control">
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="form-group">
-        <label for="search3">DIA:</label>
-        <input type="text" name="search3" id="search3" class="form-control">
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="form-group">
-        <label for="search4">DNI:</label>
-        <input type="text" name="search4" id="search4" class="form-control">
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="form-group">
-        <label for="search5">PERSONAL:</label>
-        <input type="text" name="search5" id="search5" class="form-control">
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="form-group">
-        <label for="search6">CODIGO:</label>
-        <input type="text" name="search6" id="search6" class="form-control">
-      </div>
-    </div>
-  </div>
-  <br />
-  <div align="center">
-    
-    <button type="button" name="load_data" id="load_data" class="btn btn-outline-info btn-lg">CARGAR DATA</button>
-    <button id="export-btn" class="btn btn-outline-success     btn-lg">Exportar a Excel</button>
-    <button id="record_count_label" type="button" class="btn btn-success btn-lg" style="float: right;"></button>
-  </div>
-</div>
-
-<br />
-<div class="table-responsive">
-  <div class="container-fluid" id="employee_table">
-  </div>
-</div>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+   
 
 
 
