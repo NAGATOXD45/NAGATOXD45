@@ -92,6 +92,12 @@
         $('#record_count_label').text('REGISTROS: ' + filtered_rows);  
       });
     
+      $('#show20').click(function(){
+        $('table tbody tr').hide();
+        $('table tbody tr:lt(21)').show();
+        $('#record_count_label').text('REGISTROS: ' + ($('table tbody tr:visible').length - 1));
+      });
+
       $('#show50').click(function(){
         $('table tbody tr').hide();
         $('table tbody tr:lt(51)').show();
