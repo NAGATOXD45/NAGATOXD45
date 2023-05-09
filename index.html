@@ -126,9 +126,50 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center">
     <div class="container">
+      <h1 align="center">DATOS-CSMC-VIRGEN-ASUNTA</h1>
       
+      <div class="row">
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="search1">AÑO:</label>
+            <input type="text" name="search1" id="search1" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="search2">MES:</label>
+            <input type="text" name="search2" id="search2" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="search3">DIA:</label>
+            <input type="text" name="search3" id="search3" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="search4">DNI:</label>
+            <input type="text" name="search4" id="search4" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="search5">PERSONAL:</label>
+            <input type="text" name="search5" id="search5" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="search6">CODIGO:</label>
+            <input type="text" name="search6" id="search6" class="form-control">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div align="center">
         <div class="dropdown" style="float: left;">
-          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          <button class="btn btn-success btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Mostrar
           </button>
@@ -141,70 +182,19 @@
             <a class="dropdown-item" href="#" id="showAll">Todos los registros</a>
           </div>
         </div>
-        <div class="container">
-          <h1 align="center">DATOS-CSMC-VIRGEN-ASUNTA</h1>
-          <div class="row">
-            <div class="col-md-2">
-              <div class="form-group">
-                <label for="search1">AÑO:</label>
-                <input type="text" name="search1" id="search1" class="form-control">
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="form-group">
-                <label for="search2">MES:</label>
-                <input type="text" name="search2" id="search2" class="form-control">
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="form-group">
-                <label for="search3">DIA:</label>
-                <input type="text" name="search3" id="search3" class="form-control">
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="form-group">
-                <label for="search4">DNI:</label>
-                <input type="text" name="search4" id="search4" class="form-control">
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="form-group">
-                <label for="search5">PERSONAL:</label>
-                <input type="text" name="search5" id="search5" class="form-control">
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="form-group">
-                <label for="search6">CODIGO:</label>
-                <input type="text" name="search6" id="search6" class="form-control">
-              </div>
-            </div>
-          </div>
-          <br>
-          <div align="center">
-            <button id="record_count_label" type="button" class="btn btn-success btn-lg""></button>
-            <button id="load_data" type="button" name="load_data"  class="btn btn-outline-info btn-lg">CARGAR DATA</button>
-            <button id="export-btn" class="btn btn-outline-success btn-lg">Exportar a Excel</button>
-           
-          </div>
-        </div>
-
-      </br>
-        <div class="table-responsive">
-          <div class="container" id="employee_table">
-          </div>
-        </div>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
-        
+         <button id="load_data" type="button" name="load_data" class="btn btn-outline-info btn-lg">CARGAR DATA</button>
+        <button id="record_count_label" type="button" class="btn btn-danger btn-lg"></button>
+        <button id="export-btn" class="btn btn-outline-success btn-lg">Exportar a Excel</button>
       </div>
-
-
+      <br>
+      <div class="table-responsive">
+       
+        <div class="container" id="employee_table">
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
     </div>
-
-
-    </div>
+    
 
 
   </section><!-- End Hero Section -->
