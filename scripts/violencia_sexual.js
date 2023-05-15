@@ -1,7 +1,7 @@
     $(document).ready(function(){
       $('#load_data').click(function(){
         $.ajax({
-          url:"datos.csv",
+          url:"CSV/VIOLENCIA_SEXUAL.csv",
           dataType:"text",
           success:function(data)
           {
