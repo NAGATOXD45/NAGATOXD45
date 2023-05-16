@@ -92,6 +92,10 @@
         $('#record_count_label').text('REGISTROS: ' + filtered_rows);  
       });
     
+
+
+
+      
       $('#show20').click(function(){
         $('table tbody tr').hide();
         $('table tbody tr:lt(21)').show();
@@ -156,4 +160,5 @@
         }
       
         document.getElementById('export-btn').addEventListener('click', exportToExcel);
-   
+
+
