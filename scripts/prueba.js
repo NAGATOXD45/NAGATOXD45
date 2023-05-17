@@ -3,7 +3,7 @@ $(document).ready(function () {
     $.ajax({
       url: "CSV/VIOLENCIA.csv",
       dataType: "text",
-      success: function (data) 
+      success: function (data)
       {        
         var employee_data = data.split(/\r?\n|\r/);
         var record_count = employee_data.length - 1;
@@ -52,11 +52,6 @@ $(document).ready(function () {
       }
     });
   });
-
-
-
-
-
 
   $('#search1, #search2, #search3, #search4, #search5, #search6').on('keyup change', function () {
     var search1 = $('#search1').val().toLowerCase();
@@ -118,10 +113,6 @@ $(document).ready(function () {
     $('#record_count_label').text('REGISTROS: ' + filtered_rows);
   });
 
-
-
-
-
   $('#show20').click(function () {
     $('table tbody tr').hide();
     $('table tbody tr:lt(21)').show();
@@ -162,8 +153,6 @@ $(document).ready(function () {
 });
 
 
-
-
   function exportToExcel() {
     /* Obtener los datos de la tabla */
     var table = document.getElementById('mi-tabla');
@@ -187,3 +176,5 @@ $(document).ready(function () {
   }
 
   document.getElementById('export-btn').addEventListener('click', exportToExcel);
+
+ 
