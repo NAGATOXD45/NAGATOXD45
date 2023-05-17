@@ -7,20 +7,15 @@
           {
             var employee_data = data.split(/\r?\n|\r/);
             var record_count = employee_data.length - 1;
-            var table_data = '<table id="mi-tabla" class="table table-dark table-striped table-bordered border-light">';
-            for(var count = 0; count<employee_data.length; count++)
-            {
+            var table_data = '<table id="mi-tabla" class="table table-light table-striped table-bordered border-dark">';
+            for (var count = 0; count < employee_data.length; count++) {
               var cell_data = employee_data[count].split(",");
               table_data += '<tr>';
-              for(var cell_count=0; cell_count<cell_data.length; cell_count++)
-              {
-                if(count === 0)
-                {
-                  table_data += '<th>'+cell_data[cell_count]+'</th>';
-                }
-                else
-                {
-                  table_data += '<td>'+cell_data[cell_count]+'</td>';
+              for (var cell_count = 0; cell_count < cell_data.length; cell_count++) {
+                if (count === 0) {
+                  table_data += '<th>' + cell_data[cell_count] + '</th>';
+                } else {
+                  table_data += '<td>' + cell_data[cell_count] + '</td>';
                 }
               }
               table_data += '</tr>';
@@ -28,6 +23,32 @@
             table_data += '</table>';
             $('#employee_table').html(table_data);
             $('#record_count_label').text('TOTAL: ' + record_count);
+    
+            // Buscar duplicados en la sexta columna
+            var columnIndex = 5; // Índice de la sexta columna (0 basado en el arreglo)
+            var cells = $('#mi-tabla tr td:nth-child(' + (columnIndex + 1) + ')');
+            var cellValues = {};
+            var duplicateCells = [];
+    
+            cells.each(function () {
+              var cellValue = $(this).text();
+              if (cellValues[cellValue]) {
+                cellValues[cellValue].push($(this));
+              } else {
+                cellValues[cellValue] = [$(this)];
+              }
+            });
+    
+            // Resaltar duplicados
+            for (var value in cellValues) {
+              if (cellValues.hasOwnProperty(value) && cellValues[value].length > 1) {
+                duplicateCells = duplicateCells.concat(cellValues[value]);
+              }
+            }
+    
+            $.each(duplicateCells, function () {
+              $(this).css('background-color', '#F52C01');
+            });
           }
         });
       });
