@@ -25,7 +25,7 @@
             $('#record_count_label').text('TOTAL: ' + record_count);
     
             // Buscar duplicados en la sexta columna
-            var columnIndex = 5; // Índice de la sexta columna (0 basado en el arreglo)
+            var columnIndex = 3; // Índice de la sexta columna (0 basado en el arreglo)
             var cells = $('#mi-tabla tr td:nth-child(' + (columnIndex + 1) + ')');
             var cellValues = {};
             var duplicateCells = [];
@@ -66,10 +66,10 @@
             return;
           }
     
-          var text1 = $(this).find('td').eq(1).text().toLowerCase();
-          var text2 = $(this).find('td').eq(2).text().toLowerCase();
-          var text3 = $(this).find('td').eq(3).text().toLowerCase();
-          var text4 = $(this).find('td').eq(5).text().toLowerCase();
+          var text1 = $(this).find('td').eq(0).text().toLowerCase();
+          var text2 = $(this).find('td').eq(1).text().toLowerCase();
+          var text3 = $(this).find('td').eq(2).text().toLowerCase();
+          var text4 = $(this).find('td').eq(4).text().toLowerCase();
           var text5 = $(this).find('td').eq(13).text().toLowerCase();
           var text6 = $(this).find('td').eq(14).text().toLowerCase();
           var match1 = true;

@@ -66,9 +66,9 @@
             return;
           }
     
-          var text1 = $(this).find('td').eq(1).text().toLowerCase();
-          var text2 = $(this).find('td').eq(2).text().toLowerCase();
-          var text3 = $(this).find('td').eq(3).text().toLowerCase();
+          var text1 = $(this).find('td').eq(0).text().toLowerCase();
+          var text2 = $(this).find('td').eq(1).text().toLowerCase();
+          var text3 = $(this).find('td').eq(2).text().toLowerCase();
           var text4 = $(this).find('td').eq(5).text().toLowerCase();
           var text5 = $(this).find('td').eq(13).text().toLowerCase();
           var text6 = $(this).find('td').eq(14).text().toLowerCase();
