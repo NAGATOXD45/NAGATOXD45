@@ -25,7 +25,7 @@
             $('#record_count_label').text('TOTAL: ' + record_count);
     
             // Buscar duplicados en la sexta columna
-            var columnIndex = 5; // Índice de la sexta columna (0 basado en el arreglo)
+            var columnIndex = 0; // Índice de la sexta columna (0 basado en el arreglo)
             var cells = $('#mi-tabla tr td:nth-child(' + (columnIndex + 1) + ')');
             var cellValues = {};
             var duplicateCells = [];
